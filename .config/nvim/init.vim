@@ -12,7 +12,11 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'sheerun/vim-polyglot'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' },
   Plug 'airblade/vim-gitgutter',
-  Plug 'joshdick/onedark.vim'
+  Plug 'joshdick/onedark.vim',
+  Plug 'nvim-lua/popup.nvim',
+  Plug 'nvim-lua/plenary.nvim',
+  Plug 'nvim-telescope/telescope.nvim',
+  Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 call plug#end()
 
 
@@ -140,3 +144,9 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 set relativenumber
+
+"" "" TELESCOPE STUFF
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+
+lua require("schoolboybru")
