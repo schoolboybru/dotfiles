@@ -1,5 +1,6 @@
 call plug#begin("~/.config/nvim/plugged")
   Plug 'morhetz/gruvbox'
+  Plug 'Mofiqul/dracula.nvim'
   Plug 'preservim/nerdtree'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'Xuyuanp/nerdtree-git-plugin' 
@@ -25,7 +26,7 @@ if (has("termguicolors"))
 	set termguicolors
 endif
 set background=dark
-colorscheme onedark
+colorscheme dracula
 
 nnoremap <C-p> :Files<CR>
 let g:fzf_action = {
