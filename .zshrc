@@ -122,6 +122,7 @@ alias cob="git checkout -b"
 alias gbl="git branch -l"
 alias gbd="git branch -d"
 alias gbD="git branch -D"
+alias pullm="git pull origin main"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
