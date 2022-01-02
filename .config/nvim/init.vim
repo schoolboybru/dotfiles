@@ -19,6 +19,7 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'nvim-telescope/telescope.nvim',
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' },
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+  Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'} 
 call plug#end()
 
 
@@ -65,7 +66,8 @@ let g:coc_global_extensions = [
       \ 'coc-tsserver', 
       \ 'coc-snippets', 
       \ 'coc-eslint',
-      \ 'coc-go']
+      \ 'coc-go',
+      \ 'coc-elixir']
 " " To go back to previous state use Ctrl+O
 nmap <silent><leader>gd <Plug>(coc-definition)
 nmap <silent><leader>gy <Plug>(coc-type-definition)
