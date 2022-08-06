@@ -32,6 +32,11 @@ local on_attach = function(client, bufnr)
 	end
 
 end
+
+require'lspconfig'.rust_analyzer.setup{
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
 require'lspconfig'.gopls.setup{
     capabilities = capabilities,
     on_attach = on_attach,
