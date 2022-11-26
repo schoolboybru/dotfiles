@@ -27,6 +27,7 @@ call plug#begin("~/.config/nvim/plugged")
   Plug 'hrsh7th/cmp-path'
   Plug 'L3MON4D3/LuaSnip'
   Plug 'saadparwaiz1/cmp_luasnip'
+  Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 call plug#end()
 
 set relativenumber

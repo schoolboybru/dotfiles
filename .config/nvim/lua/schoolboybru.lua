@@ -33,6 +33,12 @@ local on_attach = function(client, bufnr)
 
 end
 
+-- Colour Scheme
+local catppuccin = require("catppuccin")
+catppuccin.setup {}
+vim.g.catppuccin_flavour = "mocha"
+vim.cmd[[colorscheme catppuccin]]
+
 require'lspconfig'.rust_analyzer.setup{
   capabilities = capabilities,
   on_attach = on_attach,
