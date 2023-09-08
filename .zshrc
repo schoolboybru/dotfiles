@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/brandonbachynski/.oh-my-zsh"
+export ZSH="/Users/brandonb/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -19,6 +19,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export CAPACITOR_ANDROID_STUDIO_PATH="/Applications/Android Studio.app/"
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -120,6 +123,7 @@ alias gs="git status"
 alias gc="git commit -a"
 alias ga="git add ."
 alias push="git push"
+alias co="git checkout"
 alias cob="git checkout -b"
 alias gbl="git branch -l"
 alias gbd="git branch -d"

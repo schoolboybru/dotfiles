@@ -52,5 +52,9 @@ use {
   },
 }
 
+use 'sbdchd/neoformat'
+
+use { 'https://codeberg.org/esensar/nvim-dev-container' }
+
 end)
 
