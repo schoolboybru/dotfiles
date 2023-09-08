@@ -3,4 +3,6 @@
 .config/coc
 .config/iterm2
 .config/nvim/.netrwhist
+.config/nvim/plugin/packer_compiled.lua
 tpm
+
