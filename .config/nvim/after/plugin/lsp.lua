@@ -20,6 +20,8 @@ end)
 vim.g.neoformat_try_node_exe = 1
 vim.cmd [[autocmd BufWritePre *.tsx,*.ts,*.js,*.html,*.css Neoformat]]
 
+vim.cmd [[autocmd BufWritePre *.go lua vim.lsp.buf.format()]]
+
 vim.diagnostic.config({
     virtual_text = true,
 })
