@@ -17,6 +17,9 @@ export ZSH="/Users/${USER}/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 
+# Neofetch
+neofetch
+
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export CAPACITOR_ANDROID_STUDIO_PATH="/Applications/Android Studio.app/"
