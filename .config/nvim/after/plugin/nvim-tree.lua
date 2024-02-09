@@ -17,16 +17,10 @@ local function my_on_attach(bufnr)
 end
 
   require("nvim-tree").setup {
-    ---
     on_attach = my_on_attach,
-    ---
+    git = {
+      enable = true,
+      ignore = false,
+      timeout = 500,
+    }
   }
---[[
-local function open_nvim_tree()
-
-    -- open the tree 
-    require("nvim-tree.api").tree.open()
-end
-
-vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
---]]
