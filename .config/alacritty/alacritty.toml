@@ -6,7 +6,7 @@ import = [
 size = 14.0
 
 [font.normal]
-family = "MesloLGS NF"
+family = "Hack Nerd Font Mono"
 
 [window]
 opacity = 0.9
