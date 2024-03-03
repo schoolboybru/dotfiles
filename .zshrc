@@ -20,6 +20,7 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export CAPACITOR_ANDROID_STUDIO_PATH="/Applications/Android Studio.app/"
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+export EDITOR="nvim"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load

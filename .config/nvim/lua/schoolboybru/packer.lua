@@ -54,7 +54,18 @@ use {
 
 use 'sbdchd/neoformat'
 
-use { 'https://codeberg.org/esensar/nvim-dev-container' }
+use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
+use({
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    requires = {
+        "nvim-lua/plenary.nvim",
+    },
+    config = function()
+        require("telescope").load_extension("lazygit")
+    end,
+})
 
 end)
 
