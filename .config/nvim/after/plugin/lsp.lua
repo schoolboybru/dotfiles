@@ -1,5 +1,5 @@
 local lsp = require('lsp-zero')
-
+require'lspconfig'.gleam.setup({})
 lsp.preset('recommended')
 
 lsp.on_attach(function(client, bufnr)
