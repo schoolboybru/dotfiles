@@ -1,1 +1,2 @@
-require("schoolboybru")
+require("schoolboybru.core")
+require("schoolboybru.lazy")
