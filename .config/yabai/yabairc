@@ -29,3 +29,16 @@ yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 
 yabai -m config external_bar all:32:0
+
+
+# Visual settings
+yabai -m config window_border on
+yabai -m config active_window_border_color 0xFF88C0D0
+yabai -m config normal_window_border_color 0x002E3440
+yabai -m config insert_feedback_color 0xFFA3BE8C
+
+yabai -m config window_border_width 4
+yabai -m config window_border_radius 12
+yabai -m config window_border_blur on
+yabai -m config window_border_hidpi on
+yabai -m config window_border off
