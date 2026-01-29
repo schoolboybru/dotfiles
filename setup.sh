@@ -25,7 +25,7 @@ files=(".zshrc" ".tmux.conf" ".gitconfig")
 
 for file in "${files[@]}"; do
     if [ -f "$DOTFILES_DIR/$file" ]; then
-        ln -sf "$DOTFILES_DIR/$file" "$HOME/$file"
+        ln -sfn "$DOTFILES_DIR/$file" "$HOME/$file"
         echo "  ✓ Linked $file"
     fi
 done
@@ -34,11 +34,28 @@ done
 echo "Symlinking .config directories..."
 mkdir -p "$HOME/.config"
 
+# Symlink .config subdirectories
 for config_dir in "$DOTFILES_DIR/.config"/*; do
     if [ -d "$config_dir" ]; then
         config_name=$(basename "$config_dir")
-        ln -sf "$config_dir" "$HOME/.config/$config_name"
+        ln -sfn "$config_dir" "$HOME/.config/$config_name"
         echo "  ✓ Linked .config/$config_name"
+    fi
+done
+
+# Symlink individual .config files (e.g., opencode.json)
+for config_file in "$DOTFILES_DIR/.config"/*; do
+    if [ -f "$config_file" ]; then
+        config_name=$(basename "$config_file")
+        # Handle files that need to go into their own subdirectory
+        if [ "$config_name" = "opencode.json" ]; then
+            mkdir -p "$HOME/.config/opencode"
+            ln -sfn "$config_file" "$HOME/.config/opencode/$config_name"
+            echo "  ✓ Linked .config/opencode/$config_name"
+        else
+            ln -sfn "$config_file" "$HOME/.config/$config_name"
+            echo "  ✓ Linked .config/$config_name"
+        fi
     fi
 done
 
